@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Saints' Notice Board - Official digital noticeboard for St. James Seminary Senior High School, Abesim. Created by Kingsley Osei Akoto.">
+    <meta name="keywords" content="St James SHS, Saints Notice Board, Abesim, Sunyani, Ghana SHS, Best SHS Ghana">
+    <meta name="author" content="Kingsley Osei Akoto">
+    <meta name="copyright" content="Kingsley Osei Akoto. All Rights Reserved.">
+    <title>The Saints' Notice Board | St. James Seminary SHS</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <img src="https://kimi-web-img.moonshot.cn/img/stjameseminaryshs.edu.gh/01a90046dc507d80ecbcbfab58b76ebb7e56e8f4.png" alt="St James Logo" class="loader-logo">
+            <div class="loader-bar"></div>
+            <p class="loader-text">Loading Saints' Notice Board...</p>
+            <p class="loader-credit">By Kingsley Osei Akoto</p>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <img src="https://kimi-web-img.moonshot.cn/img/stjameseminaryshs.edu.gh/01a90046dc507d80ecbcbfab58b76ebb7e56e8f4.png" alt="St James Logo" class="school-logo">
+                    <div class="logo-text">
+                        <h1>THE SAINTS'</h1>
+                        <span>NOTICE BOARD</span>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item active" data-section="dashboard">
+                        <a href="#dashboard">
+                            <i class="fas fa-th-large"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-section="announcements">
+                        <a href="#announcements">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>Announcements</span>
+                            <span class="badge" id="announcementBadge">3</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-section="academics">
+                        <a href="#academics">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Academics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-section="houses">
+                        <a href="#houses">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Houses</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-section="calendar">
+                        <a href="#calendar">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-section="gallery">
+                        <a href="#gallery">
+                            <i class="fas fa-images"></i>
+                            <span>Gallery</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-section="contact">
+                        <a href="#contact">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="creator-info">
+                    <p>Created by</p>
+                    <h4>Kingsley Osei Akoto</h4>
+                    <a href="mailto:kingsleyoseiakoto482@gmail.com" class="creator-email">
+                        <i class="fas fa-envelope"></i> Contact Developer
+                    </a>
+                </div>
+                <p class="copyright">&copy; 2026 All Rights Reserved</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <h2 class="page-title" id="pageTitle">Dashboard</h2>
+                    <p class="current-date" id="currentDate"></p>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search notices..." id="searchInput">
+                    </div>
+                    <div class="notification-bell" id="notificationBell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">5</span>
+                    </div>
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="user-name">Ahotefoɔ</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Sections -->
+            <div class="content-wrapper">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="content-section active">
+                    <div class="welcome-banner">
+                        <div class="welcome-text">
+                            <h2>Welcome to St. James Seminary SHS</h2>
+                            <p>"Sincerity, Perseverance, Fidelity" - Since 1978</p>
+                        </div>
+                        <div class="welcome-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>#1 Best SHS in Ghana</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <!-- Quick Stats -->
+                        <div class="stats-cards">
+                            <div class="stat-card green">
+                                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                                <div class="stat-info">
+                                    <h3>965+</h3>
+                                    <p>Students</p>
+                                </div>
+                            </div>
+                            <div class="stat-card cream">
+                                <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                                <div class="stat-info">
+                                    <h3>85+</h3>
+                                    <p>Teachers</p>
+                                </div>
+                            </div>
+                            <div class="stat-card brown">
+                                <div class="stat-icon"><i class="fas fa-award"></i></div>
+                                <div class="stat-info">
+                                    <h3>100%</h3>
+                                    <p>WASSCE Pass</p>
+                                </div>
+                            </div>
+                            <div class="stat-card accent">
+                                <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                                <div class="stat-info">
+                                    <h3>47</h3>
+                                    <p>Years of Excellence</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Announcements -->
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-bullhorn"></i> Recent Announcements</h3>
+                                <a href="#announcements" class="view-all">View All</a>
+                            </div>
+                            <div class="announcement-list" id="recentAnnouncements">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Academic Calendar Preview -->
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-calendar-day"></i> Upcoming Events</h3>
+                                <a href="#calendar" class="view-all">Full Calendar</a>
+                            </div>
+                            <div class="event-list" id="upcomingEvents">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- House Points -->
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-shield-alt"></i> House Competition</h3>
+                                <span class="live-badge">Live</span>
+                            </div>
+                            <div class="house-points" id="housePoints">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Announcements Section -->
+                <section id="announcements" class="content-section">
+                    <div class="section-header">
+                        <div class="filter-tabs">
+                            <button class="tab-btn active" data-filter="all">All</button>
+                            <button class="tab-btn" data-filter="general">General</button>
+                            <button class="tab-btn" data-filter="academic">Academic</button>
+                            <button class="tab-btn" data-filter="sports">Sports</button>
+                            <button class="tab-btn" data-filter="religious">Religious</button>
+                        </div>
+                        <button class="btn btn-primary" id="newAnnouncementBtn">
+                            <i class="fas fa-plus"></i> New Notice
+                        </button>
+                    </div>
+                    <div class="announcements-grid" id="announcementsGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Academics Section -->
+                <section id="academics" class="content-section">
+                    <div class="academics-grid">
+                        <div class="content-card full-width">
+                            <div class="card-header">
+                                <h3><i class="fas fa-star"></i> Academic Excellence</h3>
+                            </div>
+                            <div class="academic-stats">
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">🏆</div>
+                                    <div class="achievement-info">
+                                        <h4>Best Performing SHS</h4>
+                                        <p>WASSCE Science Category</p>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">🥇</div>
+                                    <div class="achievement-info">
+                                        <h4>Top in Ghana</h4>
+                                        <p>Since 2011 (GES Ranking)</p>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">🌍</div>
+                                    <div class="achievement-info">
+                                        <h4>West Africa Best</h4>
+                                        <p>Overall Best Candidate 2016</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-book"></i> Programs Offered</h3>
+                            </div>
+                            <div class="programs-list">
+                                <div class="program-item">
+                                    <i class="fas fa-atom"></i>
+                                    <div>
+                                        <h4>General Science</h4>
+                                        <p>Physics, Chemistry, Biology, Elective Math</p>
+                                    </div>
+                                </div>
+                                <div class="program-item">
+                                    <i class="fas fa-calculator"></i>
+                                    <div>
+                                        <h4>General Arts</h4>
+                                        <p>Economics, Geography, History, Literature</p>
+                                    </div>
+                                </div>
+                                <div class="program-item">
+                                    <i class="fas fa-laptop-code"></i>
+                                    <div>
+                                        <h4>Business</h4>
+                                        <p>Accounting, Business Management, Economics</p>
+                                    </div>
+                                </div>
+                                <div class="program-item">
+                                    <i class="fas fa-seedling"></i>
+                                    <div>
+                                        <h4>Agriculture</h4>
+                                        <p>General Agriculture, Animal Science, Crop Science</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-trophy"></i> Recent Achievements</h3>
+                            </div>
+                            <div class="achievements-timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2022</div>
+                                    <div class="timeline-content">
+                                        <h4>WASSCE Excellence</h4>
+                                        <p>Alex Opoku Manu & Benjamin Eyram Nana Kwame Degbey topped Ghana</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2021</div>
+                                    <div class="timeline-content">
+                                        <h4>2nd & 3rd Best</h4>
+                                        <p>Produced 2nd and 3rd overall best candidates in Ghana WASSCE</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2016</div>
+                                    <div class="timeline-content">
+                                        <h4>West Africa Best</h4>
+                                        <p>Overall best candidate in West Africa and 3rd best in Ghana</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Houses Section -->
+                <section id="houses" class="content-section">
+                    <div class="houses-intro">
+                        <h2>The Four Houses of St. James</h2>
+                        <p>Named after the Martyrs of Uganda and great theologians</p>
+                    </div>
+                    <div class="houses-grid" id="housesGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Calendar Section -->
+                <section id="calendar" class="content-section">
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="btn btn-icon" id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                            <h3 id="calendarMonth">February 2026</h3>
+                            <button class="btn btn-icon" id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                    <div class="events-sidebar">
+                        <h3>Events This Month</h3>
+                        <div class="month-events" id="monthEvents">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gallery Section -->
+                <section id="gallery" class="content-section">
+                    <div class="gallery-filter">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="campus">Campus</button>
+                        <button class="filter-btn" data-filter="students">Students</button>
+                        <button class="filter-btn" data-filter="events">Events</button>
+                        <button class="filter-btn" data-filter="sports">Sports</button>
+                    </div>
+                    <div class="gallery-grid" id="galleryGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact" class="content-section">
+                    <div class="contact-grid">
+                        <div class="contact-info-card">
+                            <h3>School Information</h3>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Address</h4>
+                                    <p>P.O. Box 954, Abesim<br>Sunyani, Bono Region<br>Ghana</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>035 229 0374</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@stjameseminaryshs.edu.gh</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <div>
+                                    <h4>Website</h4>
+                                    <p>stjameseminaryshs.edu.gh</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-card">
+                            <h3>Send a Message</h3>
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" required placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" required placeholder="your@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>Category</label>
+                                    <select>
+                                        <option>General Inquiry</option>
+                                        <option>Admission</option>
+                                        <option>Academic</option>
+                                        <option>Alumni</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Message</label>
+                                    <textarea rows="4" required placeholder="Your message..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="developer-card">
+                            <h3>About the Developer</h3>
+                            <div class="developer-info">
+                                <div class="dev-avatar">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h4>Kingsley Osei Akoto</h4>
+                                <p>Full Stack Developer & Designer</p>
+                                <a href="mailto:kingsleyoseiakoto482@gmail.com" class="dev-email">
+                                    <i class="fas fa-envelope"></i> kingsleyoseiakoto482@gmail.com
+                                </a>
+                                <p class="dev-note">Proudly created for The Saints</p>
+                            </div>
+                            <div class="copyright-box">
+                                <i class="fas fa-copyright"></i>
+                                <p>&copy; 2026 Kingsley Osei Akoto<br>All Rights Reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for New Announcement -->
+    <div class="modal" id="announcementModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create New Announcement</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <form id="announcementForm">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="annTitle" required placeholder="Announcement title">
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="annCategory">
+                        <option value="general">General</option>
+                        <option value="academic">Academic</option>
+                        <option value="sports">Sports</option>
+                        <option value="religious">Religious</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Priority</label>
+                    <select id="annPriority">
+                        <option value="normal">Normal</option>
+                        <option value="high">High Priority</option>
+                        <option value="urgent">Urgent</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea id="annContent" rows="5" required placeholder="Announcement details..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Post Announcement</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <img src="" alt="Gallery Image" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
